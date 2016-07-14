@@ -21,31 +21,29 @@
 	<link rel="stylesheet" href="http://s.mlcdn.co/animate.css"> <!-- animate.css -->
 
 	<style>
-		.bg {
-			background: rgba(32,34,56,1);
-			background: -moz-linear-gradient(top, rgba(32,34,56,1) 0%, rgba(32,34,56,1) 61%, rgba(156,44,176,1) 100%);
-			background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(32,34,56,1)), color-stop(61%, rgba(32,34,56,1)), color-stop(100%, rgba(156,44,176,1)));
-			background: -webkit-linear-gradient(top, rgba(32,34,56,1) 0%, rgba(32,34,56,1) 61%, rgba(156,44,176,1) 100%);
-			background: -o-linear-gradient(top, rgba(32,34,56,1) 0%, rgba(32,34,56,1) 61%, rgba(156,44,176,1) 100%);
-			background: -ms-linear-gradient(top, rgba(32,34,56,1) 0%, rgba(32,34,56,1) 61%, rgba(156,44,176,1) 100%);
-			background: linear-gradient(to bottom, rgba(32,34,56,1) 0%, rgba(32,34,56,1) 61%, rgba(156,44,176,1) 100%);
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#202238', endColorstr='#9c2cb0', GradientType=0 );
-
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			background-size: cover;
-			-o-background-size: cover;
+		.bg-tile {
+			background-image: url("pattern.png");
+		    background-repeat: repeat;
 		}
 
-		.bg-white {
-			background: rgba(39,80,125,1);
-			background: -moz-linear-gradient(top, rgba(39,80,125,1) 0%, rgba(255,255,255,1) 100%);
-			background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(39,80,125,1)), color-stop(100%, rgba(255,255,255,1)));
-			background: -webkit-linear-gradient(top, rgba(39,80,125,1) 0%, rgba(255,255,255,1) 100%);
-			background: -o-linear-gradient(top, rgba(39,80,125,1) 0%, rgba(255,255,255,1) 100%);
-			background: -ms-linear-gradient(top, rgba(39,80,125,1) 0%, rgba(255,255,255,1) 100%);
-			background: linear-gradient(to bottom, rgba(39,80,125,1) 0%, rgba(255,255,255,1) 100%);
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#27507d', endColorstr='#ffffff', GradientType=0 );
+		.bg-gradient {
+			/*background: rgba(248,80,50,0);
+			background: -moz-linear-gradient(top, rgba(248,80,50,0) 0%, rgba(13,40,46,1) 100%);
+			background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(248,80,50,0)), color-stop(100%, rgba(13,40,46,1)));
+			background: -webkit-linear-gradient(top, rgba(248,80,50,0) 0%, rgba(13,40,46,1) 100%);
+			background: -o-linear-gradient(top, rgba(248,80,50,0) 0%, rgba(13,40,46,1) 100%);
+			background: -ms-linear-gradient(top, rgba(248,80,50,0) 0%, rgba(13,40,46,1) 100%);
+			background: linear-gradient(to bottom, rgba(248,80,50,0) 0%, rgba(13,40,46,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#0d282e', GradientType=0 );*/
+
+			background: rgba(248,80,50,0);
+			background: -moz-linear-gradient(top, rgba(248,80,50,0) 0%, rgba(13,40,46,1) 74%);
+			background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(248,80,50,0)), color-stop(74%, rgba(13,40,46,1)));
+			background: -webkit-linear-gradient(top, rgba(248,80,50,0) 0%, rgba(13,40,46,1) 74%);
+			background: -o-linear-gradient(top, rgba(248,80,50,0) 0%, rgba(13,40,46,1) 74%);
+			background: -ms-linear-gradient(top, rgba(248,80,50,0) 0%, rgba(13,40,46,1) 74%);
+			background: linear-gradient(to bottom, rgba(248,80,50,0) 0%, rgba(13,40,46,1) 74%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#0d282e', GradientType=0 );
 
 			-webkit-background-size: cover;
 			-moz-background-size: cover;
@@ -54,18 +52,16 @@
 		}
 
 		.shadow {
-			-webkit-box-shadow: -3px 3px 0px 0px rgba(0,0,0,0.25);
-			-moz-box-shadow: -3px 3px 0px 0px rgba(0,0,0,0.25);
-			box-shadow: -3px 3px 0px 0px rgba(0,0,0,0.25);
+			-webkit-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.8);
+			-moz-box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.8);
+			box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.8);
 		}
 
-		.top-buffer20 { margin-top:20px; }
+		.top-margin20 { margin-top:20px; }
 
 		.top-padding20 { padding-top: 20px; }
 
 		.top-padding100 { padding-top: 100px; }
-
-		.heigh500 { height: 500px; }
 
 		.item {
 		    position:relative;
@@ -74,11 +70,11 @@
 		}
 		.notify-badge{
 		    position: absolute;
-		    right:-20px;
-		    top:10px;
+		    right: -20px;
+		    top: 10px;
 		    background:red;
 		    text-align: center;
-		    border-radius: 30px 30px 30px 30px;
+		    border-radius: 5px 5px 5px 5px;
 		    color:white;
 		    padding:5px 10px;
 		    font-size:16px;
@@ -97,7 +93,8 @@
 
 </head>
 <body>
-	<div class="container-fluid bg">
+	<div class="bg-tile">
+	<div class="container-fluid bg-gradient">
 	  <div class="row">
 		<div class="col-md-12">
 			<div id="wrapper" style="text-align: center">    
@@ -109,11 +106,20 @@
 	  </div>
 
 	 <div class="row top-padding100 animated slideInLeft m-t-2">
+	 	<div class="col-md-3">
+				<div style="text-align: center">    
+					<div style="display: inline-block;">
+						<a href="./screenShot3.PNG" target="_blank">
+							<img class="img-responsive shadow" src="./screenShot3.PNG">
+						</a>
+					</div>
+				</div>
+			</div>
 		  <div class="col-md-3">
 				<div style="text-align: center">    
 					<div style="display: inline-block;">
 						<a href="./screenShot1.PNG" target="_blank">
-							<img class="img-responsive" src="./screenShot1.PNG">
+							<img class="img-responsive shadow" src="./screenShot1.PNG">
 						</a>
 					</div>
 				</div>
@@ -122,7 +128,7 @@
 				<div style="text-align: center">    
 					<div style="display: inline-block;">
 							<a href="./screenShot2.PNG" target="_blank">
-								<img class="img-responsive" src="./screenShot2.PNG">
+								<img class="img-responsive shadow" src="./screenShot2.PNG">
 							</a>
 					</div>
 				</div>
@@ -130,17 +136,8 @@
 			<div class="col-md-3">
 				<div style="text-align: center">    
 					<div style="display: inline-block;">
-						<a href="./screenShot3.PNG" target="_blank">
-							<img class="img-responsive" src="./screenShot3.PNG">
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-3">
-				<div style="text-align: center">    
-					<div style="display: inline-block;">
 						<a href="./screenShot4.PNG" target="_blank">
-							<img class="img-responsive" src="./screenShot4.PNG">
+							<img class="img-responsive shadow" src="./screenShot4.PNG">
 						</a>
 					</div>
 				</div>
@@ -150,18 +147,34 @@
 	  <div class="row top-padding100">
 		    <div style="text-align: center">    
 				<div style="display: inline-block;">
-	  				<iframe frameborder="0" src="https://itch.io/embed/75535?bg_color=202238&amp;fg_color=ccc&amp;link_color=04b559&amp;border_width=0&amp;border_color=202238" width="552" height="167"></iframe>
+	  				<iframe frameborder="0" src="https://itch.io/embed/75535?bg_color=0d282e&amp;fg_color=ccc&amp;link_color=04b559&amp;border_width=0&amp;border_color=0d282e" width="552" height="167"></iframe>
   				</div>
 			</div>
 	  </div>
 
-	  <div class="row top-buffer20">
+	  <div class="row top-margin20">
+		  <div class="col-md-2 col-md-offset-5">
+			<div style="text-align: center">    
+				<div style="display: inline-block;">
+					<!-- <div class="item">
+						<span class="notify-badge">SOON</span>
+			      		<img class="img-responsive" src="./iosDownload.png">
+					</div> -->
+					<a href="https://itunes.apple.com/app/id1132580481">
+						<img class="img-responsive" src="./iosDownload.png">
+					</a>
+				</div>
+			</div>
+		  </div>
+	  </div>
+
+	  <div class="row top-margin20">
 		  <div class="col-md-2 col-md-offset-5">
 			<div style="text-align: center">    
 				<div style="display: inline-block;">
 					<div class="item">
 						<span class="notify-badge">SOON</span>
-			      		<img class="img-responsive" src="./iosDownload.png">
+			      		<img class="img-responsive" src="./androidDownload.png">
 					</div>
 				</div>
 			</div>
@@ -184,6 +197,7 @@
 				</div>
 			</div>
 		  </div>
+	  </div>
 	  </div>
 </body>
 </html>
